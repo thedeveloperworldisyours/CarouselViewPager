@@ -10,11 +10,11 @@ import android.widget.TextView;
 
 public class CustomFragment extends Fragment {
 
-    public static Fragment newInstance(MainActivity context, int pos, float scale) {
-        Bundle b = new Bundle();
-        b.putInt("pos", pos);
-        b.putFloat("scale", scale);
-        return Fragment.instantiate(context, CustomFragment.class.getName(), b);
+    public static Fragment newInstance(MainActivity context, int position, float scale) {
+        Bundle bundle = new Bundle();
+        bundle.putInt("pos", position);
+        bundle.putFloat("scale", scale);
+        return Fragment.instantiate(context, CustomFragment.class.getName(), bundle);
     }
 
     @Override
@@ -24,17 +24,17 @@ public class CustomFragment extends Fragment {
             return null;
         }
 
-        LinearLayout l = (LinearLayout)
+        LinearLayout linearLayout = (LinearLayout)
                 inflater.inflate(R.layout.item, container, false);
 
-        int pos = this.getArguments().getInt("pos");
-        TextView tv = (TextView) l.findViewById(R.id.item_text);
-        tv.setText("Position = " + pos);
+        int position = this.getArguments().getInt("position");
+        TextView tv = (TextView) linearLayout.findViewById(R.id.item_text);
+        tv.setText("Position = " + position);
 
-        CustomLinearLayout root = (CustomLinearLayout) l.findViewById(R.id.root);
+        CustomLinearLayout root = (CustomLinearLayout) linearLayout.findViewById(R.id.root);
         float scale = this.getArguments().getFloat("scale");
         root.setScaleBoth(scale);
 
-        return l;
+        return linearLayout;
     }
 }
