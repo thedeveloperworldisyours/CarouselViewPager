@@ -19,7 +19,7 @@
 	        android:text="AAAAAAAAA" />
 	    <Button
 	        android:id="@+id/item_content"
-	        android:layout_width="190dp"
+	        android:layout_width="230dp"
 	        android:layout_height="120dp"
 	        android:background="@android:color/black">
 		</Button>

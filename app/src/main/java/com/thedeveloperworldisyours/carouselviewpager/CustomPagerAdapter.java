@@ -26,7 +26,7 @@ public class CustomPagerAdapter extends FragmentPagerAdapter implements ViewPage
 
     @Override
     public Fragment getItem(int position) {
-        // make the first pager bigger than others
+        // make the first mViewPager bigger than others
         //if (position == FIRST_PAGE)
         //    mScale = BIG_SCALE;
         //else

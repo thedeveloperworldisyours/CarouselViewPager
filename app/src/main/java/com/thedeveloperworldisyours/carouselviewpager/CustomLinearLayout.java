@@ -5,8 +5,10 @@ import android.graphics.Canvas;
 import android.util.AttributeSet;
 import android.widget.LinearLayout;
 
+import static com.thedeveloperworldisyours.carouselviewpager.CustomPagerAdapter.BIG_SCALE;
+
 public class CustomLinearLayout extends LinearLayout {
-    private float mScale = CustomPagerAdapter.BIG_SCALE;
+    private float mScale = BIG_SCALE;
 
     public CustomLinearLayout(Context context, AttributeSet attrs) {
         super(context, attrs);

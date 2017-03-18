@@ -9,29 +9,29 @@ public class MainActivity extends AppCompatActivity {
     public final static int PAGES = 5;
     public final static int FIRST_PAGE = 0  ;
 
-    public CustomPagerAdapter adapter;
-    public ViewPager pager;
+    public CustomPagerAdapter mAdapter;
+    public ViewPager mViewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        pager = (ViewPager) findViewById(R.id.activity_main_view_pager);
+        mViewPager = (ViewPager) findViewById(R.id.activity_main_view_pager);
 
-        adapter = new CustomPagerAdapter(this, this.getSupportFragmentManager());
-        pager.setAdapter(adapter);
-        pager.setPageTransformer(false, adapter);
+        mAdapter = new CustomPagerAdapter(this, this.getSupportFragmentManager());
+        mViewPager.setAdapter(mAdapter);
+        mViewPager.setPageTransformer(false, mAdapter);
 
         // Set current item to the middle page so we can fling to both
         // directions left and right
-        pager.setCurrentItem(FIRST_PAGE);
+        mViewPager.setCurrentItem(FIRST_PAGE);
 
-        // Necessary or the pager will only have one extra page to show
+        // Necessary or the mViewPager will only have one extra page to show
         // make this at least however many pages you can see
-        pager.setOffscreenPageLimit(3);
+        mViewPager.setOffscreenPageLimit(3);
 
         // Set margin for pages as a negative number, so a part of next and
         // previous pages will be showed
-        pager.setPageMargin(-200);
+        mViewPager.setPageMargin(-400);
     }
 }
