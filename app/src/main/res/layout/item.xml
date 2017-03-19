@@ -6,7 +6,7 @@
     android:orientation="vertical">
 
     <com.thedeveloperworldisyours.carouselviewpager.CustomLinearLayout
-        android:id="@+id/root"
+        android:id="@+id/item_root"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@android:color/transparent"
@@ -17,13 +17,12 @@
             android:id="@+id/item_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="AAAAAAAAA"
             android:textSize="@dimen/item_size_text" />
 
         <Button
             android:id="@+id/item_content"
             android:layout_width="230dp"
             android:layout_height="120dp"
-            android:background="@android:color/black"></Button>
+            android:background="@android:color/black"/>
     </com.thedeveloperworldisyours.carouselviewpager.CustomLinearLayout>
 </LinearLayout>

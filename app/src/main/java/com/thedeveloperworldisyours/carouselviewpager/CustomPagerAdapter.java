@@ -1,5 +1,6 @@
 package com.thedeveloperworldisyours.carouselviewpager;
 
+import android.app.Activity;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -14,11 +15,11 @@ public class CustomPagerAdapter extends FragmentPagerAdapter implements ViewPage
     public final static float SMALL_SCALE = 0.7f;
     public final static float DIFF_SCALE = BIG_SCALE - SMALL_SCALE;
 
-    private MainActivity mContext;
+    private Activity mContext;
     private FragmentManager mFragmentManager;
     private float mScale;
 
-    public CustomPagerAdapter(MainActivity context, FragmentManager fragmentManager) {
+    public CustomPagerAdapter(Activity context, FragmentManager fragmentManager) {
         super(fragmentManager);
         this.mFragmentManager = fragmentManager;
         this.mContext = context;
@@ -42,7 +43,7 @@ public class CustomPagerAdapter extends FragmentPagerAdapter implements ViewPage
 
     @Override
     public void transformPage(View page, float position) {
-        CustomLinearLayout myLinearLayout = (CustomLinearLayout) page.findViewById(R.id.root);
+        CustomLinearLayout myLinearLayout = (CustomLinearLayout) page.findViewById(R.id.item_root);
         float scale = BIG_SCALE;
         if (position > 0) {
             scale = scale - position * DIFF_SCALE;

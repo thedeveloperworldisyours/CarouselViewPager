@@ -1,5 +1,6 @@
 package com.thedeveloperworldisyours.carouselviewpager;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -10,7 +11,7 @@ import android.widget.TextView;
 
 public class CustomFragment extends Fragment {
 
-    public static Fragment newInstance(MainActivity context, int position, float scale) {
+    public static Fragment newInstance(Activity context, int position, float scale) {
         Bundle bundle = new Bundle();
         bundle.putInt("position", position);
         bundle.putFloat("scale", scale);
@@ -31,7 +32,7 @@ public class CustomFragment extends Fragment {
         TextView textView = (TextView) linearLayout.findViewById(R.id.item_text);
         textView.setText(String.valueOf(position));
 
-        CustomLinearLayout root = (CustomLinearLayout) linearLayout.findViewById(R.id.root);
+        CustomLinearLayout root = (CustomLinearLayout) linearLayout.findViewById(R.id.item_root);
         float scale = this.getArguments().getFloat("scale");
         root.setScaleBoth(scale);
 
