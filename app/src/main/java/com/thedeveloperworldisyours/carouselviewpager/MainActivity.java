@@ -32,6 +32,6 @@ public class MainActivity extends AppCompatActivity {
 
         // Set margin for pages as a negative number, so a part of next and
         // previous pages will be showed
-        mViewPager.setPageMargin(-400);
+        mViewPager.setPageMargin(-200);
     }
 }
