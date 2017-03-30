@@ -1,5 +1,9 @@
 # CarouselViewPager
 Carousel ViewPager with PageIndicatorView, thinking for makeing nice tutorial.
+<a href="http://thedeveloperworldisyours.com/android/carousel-viewpager/#sthash.RWArTHiD.dpbs">You'll find the supporting medium article for this project here!</a>
+<p align="center">
+ <img src="https://github.com/thedeveloperworldisyours/CarouselViewPager/blob/master/carouselViewPager.gif" width="300px" />
+</p>
 
 Also visit my blog: **[The developer world is yours](http://thedeveloperworldisyours.com/)**
 <a href="http://thedeveloperworldisyours.com/">
